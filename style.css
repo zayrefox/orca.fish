@@ -251,7 +251,9 @@ body {
 
 .standalone {
   width: calc(50% - 05pt);
-  margin-bottom: 10pt
+  margin-bottom: 10pt;
+  text-decoration: none;
+  color: black;
 }
 
 .section-header-container {
