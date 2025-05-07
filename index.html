@@ -13,17 +13,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div
+      style="position: fixed; width: 100vw; height: 100vh; visibility: hidden;"
+      class="modal-background"
+      id="modal-background"
+    >
+      <!-- Single Card -->
+      <div style="background-color: white" class="modal">
+        <h2>Whoa there!</h2>
+        <p>
+          You're going to a link that is for adults only. Please confirm you are
+          18 or older to continue.
+        </p>
+        <div style="display: flex">
+          <a class="modal-button deny" id="bsky-orca.gay-reject">Go Back</a>
+          <a class="modal-button confirm" id="confirm-18+-button">Confirm</a>
+        </div>
+      </div>
+    </div>
+
     <div style="display: flex; justify-content: center; padding: 20pt 0pt">
       <div class="name-container">
         <img src="./assets/headshot.jpg" class="headshot" />
         <div
           style="display: flex; flex-direction: column; justify-content: center"
         >
-          <h1 style="font-size: 40pt">Zayre Fox</h1>
-          <p style="font-size: 16pt">
-            Hey there, I'm Zayre! I'm a software engineer from Arlington,
-            Virginia and you may know me as host of the DC FurRide! Welcome to
-            my little corner of the internet!
+          <h1 class="name-text">Zayre Fox</h1>
+          <p class="bio-text">
+            Hey there, I'm Zayre! I'm a 23 and software engineer from Arlington, VA!
+            You may know me as host of the DC FurRide! Welcome to my little
+            corner of the internet!
           </p>
         </div>
       </div>
@@ -53,10 +72,10 @@
 
         <!-- Single Card -->
         <div class="card standalone">
-          <div class="card-content con-box">
+          <a class="card-content con-box" id="bsky-orca.gay">
             <div style="flex: 1; justify-content: center" class="sm-info">
               <p>BlueSky (18+)</p>
-              <h3 class="card-title">Tap to Reveal</h3>
+              <h3 class="card-title">@orca.gay</h3>
             </div>
             <div style="display: flex; align-items: center">
               <img
@@ -64,7 +83,7 @@
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/600px-Bluesky_Logo.svg.png"
               />
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Single Card -->
@@ -84,7 +103,10 @@
         </a>
 
         <!-- Single Card -->
-        <a class="card standalone" href="https://discord.com/users/510650752205848578">
+        <a
+          class="card standalone"
+          href="https://discord.com/users/510650752205848578"
+        >
           <div class="card-content con-box">
             <div style="flex: 1; justify-content: center" class="sm-info">
               <p>Discord</p>
@@ -100,7 +122,10 @@
         </a>
 
         <!-- Single Card -->
-        <a class="card standalone" href="https://www.furaffinity.net/user/gladisorca">
+        <a
+          class="card standalone"
+          href="https://www.furaffinity.net/user/gladisorca"
+        >
           <div class="card-content con-box">
             <div style="flex: 1; justify-content: center" class="sm-info">
               <p>FurAffinity</p>
@@ -126,7 +151,10 @@
         <div class="wrapper">
           <div class="card-list swiper-wrapper">
             <!-- Single Card -->
-            <a class="card swiper-slide" href="https://www.furtrack.com/index/zayre">
+            <a
+              class="card swiper-slide"
+              href="https://www.furtrack.com/index/zayre"
+            >
               <div class="card-image">
                 <img src="assets/zayre.jpg" alt="Design Trends" />
               </div>
@@ -137,7 +165,10 @@
             </a>
 
             <!-- Single Card -->
-            <a class="card swiper-slide" href="https://www.furtrack.com/index/gladis">
+            <a
+              class="card swiper-slide"
+              href="https://www.furtrack.com/index/gladis"
+            >
               <div class="card-image">
                 <img src="assets/gladis.jpg" alt="Design Trends" />
               </div>
@@ -148,16 +179,18 @@
             </a>
 
             <!-- Single Card -->
-            <a class="card swiper-slide" href="https://www.furtrack.com/index/colton_(coyote)">
+            <a
+              class="card swiper-slide"
+              href="https://www.furtrack.com/index/colton_(coyote)"
+            >
               <div class="card-image">
                 <img src="assets/colton.jpg" alt="Design Trends" />
               </div>
               <div class="card-content" style="display: flex">
                 <h3 class="card-title">Colton</h3>
-                <p class="card-text">CiFurFancy Costumes (2016)</p>
+                <p class="card-text">FurFancy Costumes (2016)</p>
               </div>
             </a>
-
           </div>
           <!-- Pagination -->
           <div class="swiper-pagination"></div>
@@ -261,5 +294,6 @@
 
     <!-- Custom Script -->
     <script src="./js/script.js"></script>
+    <script src="./js/listeners.js"></script>
   </body>
 </html>

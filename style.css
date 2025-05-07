@@ -16,6 +16,7 @@
 body {
 
     background: linear-gradient(#EFEFFF, #CCCBFF);
+    background-position: fixed;
     min-height: 100vh;
     
 }
@@ -279,6 +280,10 @@ body {
   background: linear-gradient(135deg, #21c429 0%, #21c429 100%);
 }
 
+.card.standalone:hover {
+  cursor: pointer;
+}
+
 .sm-icon {
   object-fit: contain;
   max-width: 2em;
@@ -308,6 +313,64 @@ body {
   padding: 10pt;
 }
 
+.bio-text {
+  font-size: 16pt;
+}
+
+.name-text {
+  font-size: 40pt;
+}
+
+.modal-background {
+  background-color:rgba(0, 0, 0, 0.25);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  justify-content: center;
+  background-color: white;
+  border-radius: 20pt;
+  padding: 15pt;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  margin: 10pt;
+  max-height: fit-content;
+  max-width: fit-content;
+}
+
+.modal-button {
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 0.81rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.modal-button:hover {
+  cursor: pointer;
+}
+
+.modal p {
+  margin: 5px 0px;
+}
+
+.modal-button.deny {
+  color: black;
+  background: linear-gradient(135deg, #d3d3d3 0%, #d3d3d3 100%);
+}
+
+.modal-button.confirm {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
 /* Responsive media query code for small screens */
 @media (max-width: 768px) {
   .wrapper {
@@ -315,6 +378,10 @@ body {
   }
   .wrapper :where(.swiper-button-prev, .swiper-button-next) {
     display: none;
+  }
+
+  .section-header {
+    font-size: 10pt;
   }
 
   .sm-container-2 {
@@ -326,7 +393,7 @@ body {
     width: 100vw;
     padding: 0px 10px;
     margin: 0 20px 0px;
-    font-size: 30pt;
+    font-size: 25pt;
   }
 
   .standalone {
@@ -339,12 +406,29 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     width: 90%;
   }
 
   .headshot {
     width: 200px;
     height: 200px;
+    margin: 0pt;
+    margin-bottom: 10pt;
   }
+
+  .bio-text {
+    font-size: 13pt;
+  }
+
+  .name-text {
+    font-size: 30pt;
+    font-weight: 600pt;
+  }
+
+  .wrapper .card:hover {
+    transform: translateY(0px);
+  }
+  
 
 }
